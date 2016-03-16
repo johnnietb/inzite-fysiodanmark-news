@@ -4,7 +4,7 @@ Plugin Name: Fysiodanmark News Checker
 Plugin URI:        https://github.com/johnnietb/inzite-fysiodanmark-news
 Description: Checks Fysiodanmark for popups and news
 Author: Johnnie Bertelsen
-Version: 0.1
+Version: 0.2
 Text Domain:       inzite-fysiodanmark-news
 GitHub Plugin URI: https://github.com/johnnietb/inzite-fysiodanmark-news
 */

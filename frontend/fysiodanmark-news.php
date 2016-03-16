@@ -40,13 +40,13 @@ Class Fysiodanmark_News {
 								global $echo_news;
 								echo $echo_news;
 								unset($GLOBALS['echo_news']);
-								return; }
+								return $echo_news; }
 							, 1 );
 						} else {
 							add_filter( 'wp_head', function( ) {
 								echo $echo_news;
 								unset($GLOBALS['echo_news']);
-								return; }
+								return $echo_news; }
 							, 1000 );
 						}
 						//echo '<div class="fysiodanmark_parent_news news_display_type_' . $acf->type . ' news_display_placement_' . $acf->placement . '" style="background-color:'.$acf->background_color.';color:'.$acf->color.';">' . $data->content->rendered . ' <a href="' . $data->link . '" class="button btn-primary" target="_blank">Læs mere</a></div>';
