@@ -1,0 +1,41 @@
+.fysiodanmark_parent_news {
+	display:none;
+	background: #6ab500;
+	position: relative;
+}
+.fysiodanmark_parent_news a {
+}
+.fysiodanmark_parent_news .close-btn {
+	position: absolute;
+	right:10px;
+	top:10px;
+	color:rgba(0,0,0,.5);
+	width: 22px;
+	height: 22px;
+	background: rgba(255,255,255,.75);
+	border-radius: 50%;
+	font-family: verdana, sans-serif;
+	font-size: 8px;
+	font-weight: bold;
+	line-height: 22px;
+	text-align: center;
+	cursor: pointer;
+}
+.fysiodanmark_parent_news .close-btn:hover {
+	background: rgba(255,255,255,1);;
+	color:rgba(0,0,0,.5);
+}
+.fysiodanmark_parent_news.news_display_type_0 {
+	left:0;
+	right:0;
+	margin:0;
+	padding:30px 20px;
+}
+.fysiodanmark_parent_news.news_display_placement_0 {
+	bottom:auto;
+	top:0;
+}
+.fysiodanmark_parent_news.news_display_placement_1 {
+	top:auto;
+	bottom:0;
+}
