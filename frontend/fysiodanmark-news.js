@@ -6,5 +6,4 @@ jQuery(document).ready( function() {
 			jQuery( '.fysiodanmark_parent_news' ).slideToggle();
 		});
 	}
-
 });
