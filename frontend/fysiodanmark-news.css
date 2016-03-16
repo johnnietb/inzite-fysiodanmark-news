@@ -2,6 +2,7 @@
 	display:none;
 	background: #6ab500;
 	position: relative;
+	padding:30px 20px;
 }
 .fysiodanmark_parent_news a {
 }
@@ -40,7 +41,6 @@
 	bottom:0;
 	top:0;
 	margin:auto;
-	padding:30px 20px;
 	height: 350px;
 	width: 600px;
 	max-width: 90%;
