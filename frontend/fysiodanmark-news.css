@@ -4,8 +4,7 @@
 	position: relative;
 	padding:30px 20px;
 }
-.fysiodanmark_parent_news a {
-}
+
 .fysiodanmark_parent_news .close-btn {
 	position: absolute;
 	right:10px;
@@ -22,10 +21,29 @@
 	text-align: center;
 	cursor: pointer;
 }
+
 .fysiodanmark_parent_news .close-btn:hover {
 	background: rgba(255,255,255,1);;
 	color:rgba(0,0,0,.5);
 }
+
+.fysiodanmark_parent_news .down-btn {
+	position: absolute;
+	left:48%;
+	bottom:10px;
+	color:rgba(0,0,0,.5);
+	width: 32px;
+	height: 32px;
+	background: rgba(255,255,255,.75);
+	border-radius: 50%;
+	font-family: verdana, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	line-height: 32px;
+	text-align: center;
+	cursor: pointer;
+}
+
 .fysiodanmark_parent_news.news_display_placement_0 {
 	bottom:auto;
 	top:0;
@@ -52,4 +70,23 @@
 	border:5px solid #fff;
 	box-shadow: 0 0 2000px 1000px rgba(0,0,0,.5);
 	overflow-y: scroll;
+}
+.fysiodanmark_parent_news.news_display_type_0 .inner_news {
+	margin:0 auto;
+}
+@media screen and (min-width: 1200px){
+	.fysiodanmark_parent_news.news_display_type_0 .inner_news {
+	    width: 1090px;
+	}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px)  {
+	.fysiodanmark_parent_news.news_display_type_0 .inner_news {
+	    width: 970px;
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+	.fysiodanmark_parent_news.news_display_type_0 .inner_news {
+	    width: 750px;
+	}
 }
