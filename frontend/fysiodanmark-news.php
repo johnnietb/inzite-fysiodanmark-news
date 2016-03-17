@@ -12,7 +12,7 @@ Class Fysiodanmark_News {
 	}
 
 	function enqueue_scripts() {
-		if ( is_home() && !is_admin() ) {
+		if ( (is_home() || is_front_page()) && !is_admin() ) {
 			wp_enqueue_script( 'fysiodanmark-news', plugins_url( 'fysiodanmark-news.js', __FILE__ ) , array('jquery'), '', true);
 			wp_enqueue_style( 'fysiodanmark-news-styles', plugins_url( 'fysiodanmark-news.css', __FILE__ ) );
 		}
