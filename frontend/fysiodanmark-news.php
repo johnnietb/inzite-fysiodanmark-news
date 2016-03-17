@@ -19,19 +19,21 @@ Class Fysiodanmark_News {
 	}
 
 	function display_news() {
-		$data = $this->CallAPI('GET', 'http://fysiodanmark.dk/wp-json/wp/v2/global-api', $data = array('per_page'=>1));
-		if ($data) {
-			$data = json_decode($data);
-			// print_r($data);
-			$data = $data[0];
+		if ( (is_home() || is_front_page()) && !is_admin() ) {
+			$data = $this->CallAPI('GET', 'http://fysiodanmark.dk/wp-json/wp/v2/global-api', $data = array('per_page'=>1));
+			if ($data) {
+				$data = json_decode($data);
+				// print_r($data);
+				$data = $data[0];
 
-			if ($data->content->rendered) {
-				if ($data->acf) {
-					$acf = $data->acf;
-					// print_r($acf);
-					if ( date('d-m-Y',strtotime($acf->date_start)) <= date('d-m-Y') && date('d-m-Y', strtotime($acf->date_end)) >= date('d-m-Y') ) {
-						$echo_news = '<div class="fysiodanmark_parent_news news_display_type_' . $acf->type . ' news_display_placement_' . $acf->placement . '" style="background-color:'.$acf->background_color.';color:'.$acf->color.';" data-delay="'.$acf->delay.'"><div class="inner_news">' . $data->content->rendered . '</div></div>';
-						echo $echo_news;
+				if ($data->content->rendered) {
+					if ($data->acf) {
+						$acf = $data->acf;
+						// print_r($acf);
+						if ( date('d-m-Y',strtotime($acf->date_start)) <= date('d-m-Y') && date('d-m-Y', strtotime($acf->date_end)) >= date('d-m-Y') ) {
+							$echo_news = '<div class="fysiodanmark_parent_news news_display_type_' . $acf->type . ' news_display_placement_' . $acf->placement . '" style="background-color:'.$acf->background_color.';color:'.$acf->color.';" data-delay="'.$acf->delay.'"><div class="inner_news">' . $data->content->rendered . '</div></div>';
+							echo $echo_news;
+						}
 					}
 				}
 			}
