@@ -4,6 +4,9 @@
 	position: relative;
 	padding:30px 20px;
 }
+.fysiodanmark_parent_news .inner_news p:last-child {
+	margin-bottom:0;
+}
 
 .fysiodanmark_parent_news .close-btn {
 	position: absolute;
